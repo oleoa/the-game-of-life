@@ -28,12 +28,12 @@ function countNeighbors(row: number, col: number) {
 	return alive_neighbors;
 }
 
-function resetCells() {
+function resetCells(template: (col: number, row: number) => boolean = () => false) {
 	const newCells: boolean[][] = [];
 	for (let row = 0; row < rows; row++) {
 		newCells[row] = [];
 		for (let col = 0; col < cols; col++) {
-			newCells[row][col] = false;
+			newCells[row][col] = template(row, col);
 		}
 	}
 	table.cells = newCells;

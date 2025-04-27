@@ -1,5 +1,5 @@
 const border = $state({
-	enabled: false
+	enabled: true
 });
 
 function toggleBorder() {
