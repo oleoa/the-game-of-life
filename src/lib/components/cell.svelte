@@ -1,9 +1,9 @@
 <script lang="ts">
-	let { cell, toggle } = $props();
+	let { alive, toggle, border } = $props();
 </script>
 
 <button
 	onclick={toggle}
 	aria-label="Toggle cell alive"
-	class="cell text-center text-xs {cell.isAlive ? 'bg-white' : 'bg-black'}"
+	class="cell {alive ? 'bg-white' : 'bg-black'} {border.enabled ? 'my-border' : ''}"
 ></button>
