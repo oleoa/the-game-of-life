@@ -51,6 +51,56 @@ function setTemplate(type: Template) {
 		}
 		return (table.cells = newCells);
 	}
+	if (type === 'glider-gun') {
+		const newCells: boolean[][] = [];
+		for (let row = 0; row < rows; row++) {
+			newCells[row] = [];
+			for (let col = 0; col < cols; col++) {
+				newCells[row][col] = false;
+
+				if (row == 5 && col == 1) newCells[row][col] = true;
+				if (row == 5 && col == 2) newCells[row][col] = true;
+				if (row == 6 && col == 1) newCells[row][col] = true;
+				if (row == 6 && col == 2) newCells[row][col] = true;
+
+				if (row == 3 && col == 13) newCells[row][col] = true;
+				if (row == 3 && col == 14) newCells[row][col] = true;
+				if (row == 4 && col == 12) newCells[row][col] = true;
+				if (row == 4 && col == 16) newCells[row][col] = true;
+				if (row == 5 && col == 11) newCells[row][col] = true;
+				if (row == 5 && col == 17) newCells[row][col] = true;
+				if (row == 6 && col == 11) newCells[row][col] = true;
+				if (row == 6 && col == 15) newCells[row][col] = true;
+				if (row == 6 && col == 17) newCells[row][col] = true;
+				if (row == 6 && col == 18) newCells[row][col] = true;
+				if (row == 7 && col == 11) newCells[row][col] = true;
+				if (row == 7 && col == 17) newCells[row][col] = true;
+				if (row == 8 && col == 12) newCells[row][col] = true;
+				if (row == 8 && col == 16) newCells[row][col] = true;
+				if (row == 9 && col == 13) newCells[row][col] = true;
+				if (row == 9 && col == 14) newCells[row][col] = true;
+
+				if (row == 1 && col == 25) newCells[row][col] = true;
+				if (row == 2 && col == 23) newCells[row][col] = true;
+				if (row == 2 && col == 25) newCells[row][col] = true;
+				if (row == 3 && col == 21) newCells[row][col] = true;
+				if (row == 3 && col == 22) newCells[row][col] = true;
+				if (row == 4 && col == 21) newCells[row][col] = true;
+				if (row == 4 && col == 22) newCells[row][col] = true;
+				if (row == 5 && col == 21) newCells[row][col] = true;
+				if (row == 5 && col == 22) newCells[row][col] = true;
+				if (row == 6 && col == 23) newCells[row][col] = true;
+				if (row == 6 && col == 25) newCells[row][col] = true;
+				if (row == 7 && col == 25) newCells[row][col] = true;
+
+				if (row == 3 && col == 35) newCells[row][col] = true;
+				if (row == 3 && col == 36) newCells[row][col] = true;
+				if (row == 4 && col == 35) newCells[row][col] = true;
+				if (row == 4 && col == 36) newCells[row][col] = true;
+			}
+		}
+		return (table.cells = newCells);
+	}
 }
 
 export { setTemplate };

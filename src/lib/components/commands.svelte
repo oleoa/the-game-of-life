@@ -88,5 +88,12 @@
 		>
 			<i class="fa-solid fa-random"></i>
 		</button>
+		<button
+			class="cursor-pointer rounded-lg border px-2 py-1"
+			onclick={() => template.setTemplate('glider-gun')}
+			aria-label="Glider Gun"
+		>
+			Glider
+		</button>
 	</div>
 </nav>
