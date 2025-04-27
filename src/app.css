@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+	--width-cell: 1rem;
+	--height-cell: 1rem;
+	--color-border: oklch(75% 0 0);
+	--border-width: 0.1px;
+}
+
+.semiborder {
+	border-color: var(--color-border);
+	border-width: var(--border-width);
+}
+
+.cell {
+	width: var(--width-cell);
+	height: var(--height-cell);
+	border-color: var(--color-border);
+	border-width: var(--border-width);
+	@apply text-white;
+}
