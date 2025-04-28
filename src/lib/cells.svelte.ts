@@ -1,4 +1,5 @@
 import { rows, cols } from './config';
+import { stop } from './interval.svelte';
 
 const table = $state<{ cells: boolean[][] }>({
 	cells: []
@@ -53,6 +54,7 @@ function next() {
 			next_cells[row][col] = new_cell;
 		});
 	});
+	if (JSON.stringify(next_cells) === JSON.stringify(table.cells)) stop();
 	table.cells = next_cells;
 }
 
